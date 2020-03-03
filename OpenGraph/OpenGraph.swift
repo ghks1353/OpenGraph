@@ -22,7 +22,7 @@ public struct OpenGraph {
         task.resume()
         return task
     }
-    
+
     private static func handleFetchResult(data: Data?, response: URLResponse?, completion: @escaping (Result<OpenGraph, Error>) -> Void) {
         guard let data = data, let response = response as? HTTPURLResponse else {
             return

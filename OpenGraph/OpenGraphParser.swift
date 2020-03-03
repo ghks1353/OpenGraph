@@ -5,7 +5,7 @@ public protocol OpenGraphParser {
 }
 
 extension OpenGraphParser {
-    func parse(htmlString: String) -> [OpenGraphMetadata: String] {
+    public func parse(htmlString: String) -> [OpenGraphMetadata: String] {
         // extract meta tag
         let metatagRegex  = try! NSRegularExpression(
             pattern: "<meta(?:\".*?\"|\'.*?\'|[^\'\"])*?>",
